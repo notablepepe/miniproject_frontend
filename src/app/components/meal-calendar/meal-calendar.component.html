@@ -1,0 +1,210 @@
+<div class="container">
+<h1 class="card-title text-center mb-4">Meal Planner</h1>
+<form class="card m-5 table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="col-2">Day</th>
+        <th class="col">Breakfast</th>
+        <th class="col">Lunch</th>
+        <th class="col">Dinner</th>
+        <th class="col-2">Total Macros</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td class="d-block d-md-table-cell">Monday</td>
+        <td>
+          <select  #breakfastMon (change)="addToMealPlanner('Monday' ,'breakfast', breakfastMon.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #lunchMon (change)="addToMealPlanner('Monday' , 'lunch', lunchMon.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList " value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #dinnerMon (change)="addToMealPlanner('Monday', 'dinner', dinnerMon.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <p>Total Calories: {{ macrosMap['Monday']?.calories }}</p>
+          <p>Total Protein: {{ macrosMap['Monday']?.protein }}</p>
+          <p>Total Carbs: {{ macrosMap['Monday']?.carbs}}</p>
+          <p>Total Fats: {{ macrosMap['Monday']?.fats }}</p>
+        </td>
+      </tr>
+      <tr >
+        <td class="d-block d-md-table-cell">Tuesday</td>
+        <td>
+          <select  #breakfastTue (change)="addToMealPlanner('Tuesday' ,'breakfast', breakfastTue.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #lunchTue (change)="addToMealPlanner('Tuesday' , 'lunch', lunchTue.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList " value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #dinnerTue (change)="addToMealPlanner('Tuesday', 'dinner', dinnerTue.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option class="truncate-text"  *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+            <p>Total Calories: {{ macrosMap['Tuesday']?.calories }}</p>
+            <p>Total Protein: {{ macrosMap['Tuesday']?.protein }}</p>
+            <p>Total Carbs: {{ macrosMap['Tuesday']?.carbs}}</p>
+            <p>Total Fats: {{ macrosMap['Tuesday']?.fats }}</p>
+        </td>
+      </tr>
+      <tr >
+        <td class="d-block d-md-table-cell">Wednesday</td>
+        <td>
+          <select  #breakfastWed (change)="addToMealPlanner('Wednesday' ,'breakfast', breakfastWed.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #lunchWed (change)="addToMealPlanner('Wednesday' , 'lunch', lunchWed.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList " value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #dinnerWed (change)="addToMealPlanner('Wednesday', 'dinner', dinnerWed.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+            <p>Total Calories: {{ macrosMap['Wednesday']?.calories }}</p>
+            <p>Total Protein: {{ macrosMap['Wednesday']?.protein }}</p>
+            <p>Total Carbs: {{ macrosMap['Wednesday']?.carbs}}</p>
+            <p>Total Fats: {{ macrosMap['Wednesday']?.fats }}</p>
+        </td>
+      </tr>
+      <tr >
+        <td class="d-block d-md-table-cell">Thursday</td>
+        <td>
+          <select  #breakfastThu (change)="addToMealPlanner('Thursday' , 'breakfast', breakfastThu.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #lunchThu (change)="addToMealPlanner('Thursday' , 'lunch', lunchThu.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList " value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #dinnerThu (change)="addToMealPlanner('Thursday', 'dinner', dinnerThu.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+            <p>Total Calories: {{ macrosMap['Thursday']?.calories }}</p>
+            <p>Total Protein: {{ macrosMap['Thursday']?.protein }}</p>
+            <p>Total Carbs: {{ macrosMap['Thursday']?.carbs}}</p>
+            <p>Total Fats: {{ macrosMap['Thursday']?.fats }}</p>
+        </td>
+      </tr>
+      <tr >
+        <td class="d-block d-md-table-cell">Friday</td>
+        <td>
+          <select  #breakfastFri (change)="addToMealPlanner('Friday' ,'breakfast', breakfastFri.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #lunchFri (change)="addToMealPlanner('Friday' , 'lunch', lunchFri.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList " value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #dinnerFri (change)="addToMealPlanner('Friday', 'dinner', dinnerFri.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+            <p>Total Calories: {{ macrosMap['Friday']?.calories }}</p>
+            <p>Total Protein: {{ macrosMap['Friday']?.protein }}</p>
+            <p>Total Carbs: {{ macrosMap['Friday']?.carbs}}</p>
+            <p>Total Fats: {{ macrosMap['Friday']?.fats }}</p>
+        </td>
+      </tr>
+      <tr >
+        <td class="d-block d-md-table-cell">Saturday</td>
+        <td>
+          <select  #breakfastSat (change)="addToMealPlanner('Saturday' ,'breakfast', breakfastSat.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #lunchSat (change)="addToMealPlanner('Saturday' , 'lunch', lunchSat.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList " value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #dinnerSat (change)="addToMealPlanner('Saturday', 'dinner', dinnerSat.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+            <p>Total Calories: {{ macrosMap['Saturday']?.calories }}</p>
+            <p>Total Protein: {{ macrosMap['Saturday']?.protein }}</p>
+            <p>Total Carbs: {{ macrosMap['Saturday']?.carbs}}</p>
+            <p>Total Fats: {{ macrosMap['Saturday']?.fats }}</p>
+        </td>
+      </tr>
+      <tr >
+        <td class="d-block d-md-table-cell">Sunday</td>
+        <td>
+          <select  #breakfastSun (change)="addToMealPlanner('Sunday' ,'breakfast', breakfastSun.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #lunchSun (change)="addToMealPlanner('Sunday' , 'lunch', lunchSun.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList " value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+          <select #dinnerSun (change)="addToMealPlanner('Sunday', 'dinner', dinnerSun.value)" class="form-select truncate-text">
+            <option value="">Select a recipe</option>
+            <option *ngFor="let recipe of favoriteRecipeCardList" value="{{recipe.id}}">{{ recipe.name }}</option>
+          </select>
+        </td>
+        <td>
+            <p>Total Calories: {{ macrosMap['Sunday']?.calories }}</p>
+            <p>Total Protein: {{ macrosMap['Sunday']?.protein }}</p>
+            <p>Total Carbs: {{ macrosMap['Sunday']?.carbs}}</p>
+            <p>Total Fats: {{ macrosMap['Sunday']?.fats }}</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+    <div class="d-flex justify-content-center my-5">
+        <button class="btn btn-primary" (click)="generateShoppingList()">Generate Shopping List</button>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 80vh;
+  }
+  
+  .recipe-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+  .ingredients-instructions-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .ingredients,
+  .instructions {
+    flex-basis: 45%; 
+  }
+  
+  .ingredients h3,
+  .instructions h3 {
+    margin-top: 0;
+  }
+  

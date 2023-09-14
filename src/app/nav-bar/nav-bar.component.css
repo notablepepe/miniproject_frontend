@@ -1,0 +1,47 @@
+.sidenav-container {
+    height: 100vh;
+  }
+  
+  .sidenav {
+    width: 250px;
+  }
+
+  .nav-link {
+    color: black;
+  }
+
+  .fixed-sidebar {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto; 
+  }
+
+
+
+
+@media (max-width: 670px) {
+  .sidenav-container {
+    display: flex;
+  }
+
+  .fixed-sidebar{
+    position:static
+  }
+
+  .sidenav {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .sidenav-container {
+    height: 35vh;
+  }
+
+  .mat-sidenav-content {
+    flex: 1;
+  }
+}
+
+
+
+

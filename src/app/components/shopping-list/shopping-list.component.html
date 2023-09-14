@@ -1,0 +1,10 @@
+<div class="card m-5 w-50 mx-auto">
+    <div class="card-body text-center">
+      <h2 class="card-title">Shopping List from your meal calendar!</h2>
+      <ul class="list-group" *ngIf="totalIngredients">
+        <li class="list-group-item" *ngFor="let ingredient of totalIngredients">
+          {{ ingredient.totalAmount }} {{ ingredient.unit }} {{ ingredient.ingredient }}
+        </li>
+      </ul>
+    </div>
+  </div>

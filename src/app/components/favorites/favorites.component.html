@@ -1,0 +1,25 @@
+
+<div class="container">
+    <h1 class="mt-5">Favorite Recipes</h1>
+    <div class="row mt-4">
+      <div class="col-md-6" *ngFor="let recipe of favoriteRecipeCardList">
+        <div class="card mb-4">
+          <img [src]="recipe.image" class="card-img-top" alt="{{ recipe.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ recipe.name }}</h5>
+            <div class="card-text">
+              <strong>Macros:</strong><br>
+              <ul>
+                <li *ngFor="let nutrient of recipe.nutrients">
+                  {{ nutrient.name }}: {{ nutrient.amount }} {{ nutrient.unit }}
+                </li>
+              </ul>
+            </div>
+            <button class="btn btn-danger m-2" (click)="removeFromFavorites(recipe.id)">Remove from Favorites</button>
+            <button class="btn btn-secondary mr-2" (click)="getDetails(recipe.id)">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  

@@ -1,0 +1,52 @@
+<!-- <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav class="sidenav" mode="side" opened>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/profile">User Profile</a>
+        <a mat-list-item routerLink="/browse">Browse Recipes</a>
+        <a mat-list-item routerLink="/favorites">Favorited Recipes</a>
+        <a mat-list-item routerLink="/mealcalendar">Meal Calendar</a>
+        <a mat-list-item routerLink="/shoppinglist">Shopping List</a>
+        <a mat-list-item routerLink="/contactus">Contact Us</a>
+        <a mat-list-item (click)="logout()">Log Out</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container> -->
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar sidenav-container fixed-sidebar">
+        <div class="position-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/profile">User Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/browse">Browse Recipes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/favorites">Favorited Recipes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/mealcalendar">Meal Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/shoppinglist">Shopping List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/contactus">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="logout()">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+  

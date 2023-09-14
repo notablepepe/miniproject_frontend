@@ -1,0 +1,37 @@
+<div class="dialog-content">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">{{ data.card.name }}</h2>
+
+      <div class="recipe-info">
+        <p><strong>ID:</strong> {{ data.card.id }}</p>
+        <p><strong>Duration:</strong> {{ data.card.duration }} minutes</p>
+        <p><strong>Servings:</strong> {{ data.card.servings }}</p>
+      </div>
+
+      <div class="image-container text-center">
+        <div class="card mb-3">
+          <img class="card-img-top recipe-image" [src]="data.card.image" alt="{{ data.card.name }}">
+        </div>
+        <div class="card-body-buttons">
+          <button class="btn btn-primary my-2" (click)="addToFavorites(data.card.id)">Favorite Recipe</button>
+          <!-- <button class="btn btn-secondary m-2" (click)="removeFromFavorites(data.card.id)">Unfavorite Recipe</button> -->
+        </div>
+      </div>
+
+      <div class="ingredients-instructions-container">
+        <div class="ingredients">
+          <h3 class="card-subtitle">Ingredients</h3>
+          <ul class="list-group ingredients-list">
+            <li class="list-group-item" *ngFor="let ingredient of data.card.ingredients" [innerHTML]="ingredient.ingredientDetails"></li>
+          </ul>
+        </div>
+
+        <div class="instructions">
+          <h3 class="card-subtitle">Instructions</h3>
+          <div class="card-text" [innerHTML]="data.card.instructions"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
